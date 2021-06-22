@@ -1,8 +1,8 @@
 # App that Allow Change Colors Dinamically
 
 ![Image1 of App](example1.png)
-![Image1 of App](example2.png)
-![Image1 of App](example2.png)
+![Image2 of App](example2.png)
+![Image3 of App](example3.png)
 
 In the main is used a StreamBuilder<MaterialColor>
 
