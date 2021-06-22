@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
-options: "7e4e23d4efe3744f7534c990d476ed57"
-build_time: [1624323289, 487275000]
-inputs:
-  "/Users/andresito/Desktop/select_app_color/macos/Runner/MainFlutterWindow.swift": [1623437044, 0]
-  "/Users/andresito/Desktop/select_app_color/macos/Runner/AppDelegate.swift": [1623437044, 0]
-  "/Users/andresito/Desktop/select_app_color/macos/Flutter/GeneratedPluginRegistrant.swift": [1624323274, 385406972]
