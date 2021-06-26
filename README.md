@@ -6,6 +6,8 @@
 
 In the main is used a StreamBuilder<MaterialColor>
 
+    import 'dart:async';
+    
     ...
     StreamController<MaterialColor> isLightTheme = StreamController();
     class MyApp extends StatelessWidget {
