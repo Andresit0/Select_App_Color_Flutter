@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'listBtnsAppColors.dart';
+import 'clr.dart' as color;
+import 'listBtnsAppColors.dart' as btnListColor;
 
 void main() {
   runApp(MyApp());
 }
-
-StreamController<MaterialColor> isLightTheme = StreamController();
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<MaterialColor>(
         initialData: Colors.blue,
-        stream: isLightTheme.stream,
+        stream: color.colorAppStream.stream,
         builder: (context, snapshot) {
           return MaterialApp(
             title: 'FACTEC',
@@ -42,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: ListBtnsAppColors(),
+      body: btnListColor.listColorButton(),
     );
   }
 }
