@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         stream: color.colorAppStream.stream,
         builder: (context, snapshot) {
           return MaterialApp(
-            title: 'FACTEC',
+            title: 'Color',
             theme: ThemeData(
               primarySwatch: snapshot.data,
               visualDensity: VisualDensity.adaptivePlatformDensity,
