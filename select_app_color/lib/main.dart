@@ -33,13 +33,52 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  double iconSize = 100;
+  bool activateColor = false;
+
+  Widget colorButton(double height) {
+    return Container(
+      height: height,
+      child: Row(
+        children: [
+          activateColor
+              ? Expanded(child: btnListColor.listColorButton(iconSize))
+              : Expanded(child: Container()),
+          Container(
+            color: Colors.transparent,
+            alignment: Alignment.centerRight,
+            child: IconButton(
+                splashRadius: 1,
+                iconSize: iconSize,
+                onPressed: () {
+                  setState(() {
+                    activateColor = !activateColor;
+                  });
+                },
+                icon: Icon(
+                  activateColor ? Icons.cancel_outlined : Icons.color_lens,
+                  size: iconSize,
+                  color: Theme.of(context).colorScheme.secondary,
+                )),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: btnListColor.listColorButton(),
+      body: Column(
+        children: [
+          Container(height: 200, child: btnListColor.listColorButton(200)),
+          Padding(padding: EdgeInsets.only(top: 30)),
+          colorButton(100),
+        ],
+      ),
     );
   }
 }
